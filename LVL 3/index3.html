@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naughty Pet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="canvas1"></canvas>
+    <!--On page load call showInstructions method-->
+<body onload="showInstructions()" onkeydown="KeyDown(event)" onkeyup="KeyUp(event)" ondragend="onMouseUp()">
+	<!-- Banner -->
+	<img id="banner" src="Images/banner.png">
+
+	<div id="instructionsModal" class="modal">
+
+		<div class="modal-content">
+			<img class="logo" src="Images/banner.png">
+
+			<h3>Instructions</h3>
+
+			<p>How to play:</p>
+			<ul class="instrc">
+				<li>Reach 50 points within the time limit to pass the level!</li>
+				<li>Complete each level by avoiding the enemy characters</li>
+				<li>Kill flying enemies by jumping on them</li>
+				<li>Killing an enemy grants you bonus score</li>
+				<li>Avoid things on the ground by jumping over them</li>
+			</ul>
+
+			<p>Controls:</p>
+			<ul>
+				<li>Press 'w' to jump</li>
+				<li>Press 'a' to move left</li>
+				<li>Press 'd' to move right</li>
+				<li>Press 's' to sit</li>
+			</ul>
+
+			<!--Play button-->
+			<div class="startButton" id="start">
+				<img class="buttonImages" src="Images/play.png" width="100%" onClick="startGame()" alt="PlayButton" />
+			</div>
+
+		</div>
+	</div>
+
+	<ul class="lvl" id="navi" style="display: none">
+		<li><a href="/LVL 2/index.html">Previous Level</a></li>
+		<li><a href="/Backstory/six.html">Let's Go Home!</a></li>
+	</ul>
+
+    <img id='character' src="Images/Player/dog.png">
+    <img id="layer1" src="Layers/lvl3_layer01.png">
+    <img id="layer2" src="Layers/lvl3_layer02.png">
+    <img id="layer3" src="Layers/lvl3_layer03.png">
+    <img id="layer4" src="Layers/lvl3_layer04.png">
+	<img id="layer5" src="Layers/lvl3_layer05.png">
+	<img id="layer6" src="Layers/lvl3_layer06.png">
+	<img id="enemy_fly" src="Images/Enemy/flyball_lvl3.png">
+	<img id="enemy_rock" src="Images/Enemy/skull_lvl3.png">
+	<img id="collisionAnimation" src="Images/boom.png">
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

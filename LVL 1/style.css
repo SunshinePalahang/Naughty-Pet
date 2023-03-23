@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#canvas1 {
+    border: 5px solid black;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+#character, #layer1, #layer2, #layer3, #layer4, #layer5, #layer6, #enemy_fly, #enemy_rock, #collisionAnimation {
+    display: none;
+}
+
+body {
+  background-color: #d6d7d8;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+#banner {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  scale: 55%;
+}
+
+.lvl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 22%;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.lvl li a{
+  display: block;
+  float: left;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 23%;
+  list-style: none;
+  padding: 5px 900px;
+  margin: 3px;
+  color: #141742;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: all ease 0.2s;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.lvl .active{
+  opacity: 1;
+}
+
+.lvl li a:hover{
+  opacity: 1;
+  transition: all ease 0.2s;
+  text-decoration: underline;
+}
+
+.restartButtonLeft{
+  margin: auto;
+  width: 150px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.restartButtonLeft:hover{
+  /* IE 11 and lower don't support filter */
+  -webkit-filter: saturate(1.6);
+  filter: saturate(1.6);
+}
+
+.resumeButton{
+  margin: auto;
+  width: 150px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.resumeButton:hover{
+  /* IE 11 and lower don't support filter */
+  -webkit-filter: saturate(1.6);
+  filter: saturate(1.6);
+}
+
+.startButton{
+  margin: auto;
+  width: 150px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.startButton:hover{
+  /* IE 11 and lower don't support filter */
+  -webkit-filter: saturate(1.6);
+  filter: saturate(1.6);
+}
+
+.button {
+  display: inline-block;
+  /* padding: 18px 28px; */
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  /* border-radius: 15px;
+  box-shadow: 0 9px #999; */
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.button:hover {
+  /* IE 11 and lower don't support filter */
+  -webkit-filter: saturate(1.6);
+  filter: saturate(1.6);
+}
+
+.button:active {
+  /* IE 11 and lower don't support filter */
+  -webkit-filter: saturate(1.6);
+  filter: saturate(1.6);
+  transform: translateY(1px);
+}
+.buttonImages{
+    width:100%;
+    height:100%;
+}
+
+#buttonRestart {
+    text-align: center;
+    white-space: normal;
+    float: left;
+    margin-left: 20%;
+    display: flex;
+}
+
+#buttonWrapper{
+  margin-top: 20px;
+  text-align: center;
+  max-width: 99%;
+}
+
+#buttonController
+{
+  display: inline-block;
+	text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  white-space: normal;
+  display: flex;
+  margin-top: 18%;
+}
+
+#buttonPauseAudio {
+  display: inline-block;
+	max-width: 20%;
+  margin-top: -10%;
+  margin-left: 45%;
+}
+
+#buttonPause{
+	float: right;
+	margin-bottom: 7%;
+}
+
+#buttonAudio{
+	float: right;
+  margin-bottom: 7%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.logo {
+  scale: 70%;
+  margin-left: 17%;
+  margin-top: -1%;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 11% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    align-items: center;
+}
+
+.modal-content h3{
+  align-content: center;
+  font-size: 2rem;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  
+}
+
+.modal-content p{
+  margin-left: 5%;
+  margin-top: 2%;
+  font-size: 1.2rem;
+
+}
+
+.modal-content li {
+  margin-left: 30%;
+}
+.col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+    margin-left: 30%;
+}
+.col-75 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.mess{
+  margin-left: 5%;
+}
+.Sound{
+  width: 70%;
+  height: auto;
+  margin-left: 50%;
+}
+.back{
+  width: 70%;
+  height: auto;
+  margin-top: 11%;
+}
+#optionsModal{
+  text-align: center;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    #buttonController, #buttonPauseAudio {
+        display: block;
+        width: 65%;
+        margin: 0 auto;
+    }
+}
